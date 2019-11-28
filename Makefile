@@ -10,8 +10,7 @@ $(PDF_NAME).pdf: $(SRC_MAIN).pdf
 
 $(SRC_MAIN).pdf: $(SRC_MAIN).tex
 	$(TEX) $<
-	$(MAKEINDEX) $<
-	$(TEX) $<
+	$(MAKEINDEX) $(SRC_MAIN).idx
 	$(TEX) $<
 
 clean:
